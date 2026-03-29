@@ -231,11 +231,6 @@
   color: var(--muted);
 }
 
-
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 1000px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
