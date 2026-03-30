@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop — Lala Blue</title>
+    <meta name="description" content="Shop Lala Blue. The Gammon Bag — limited edition leather shoulder bag, $495.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+        .shop-header-section {
+            margin-top: var(--header-h);
+            padding: 72px 52px 48px;
+            border-bottom: 1px solid var(--border);
+        }
+        .shop-header-section h1 {
+            font-family: var(--serif);
+            font-size: clamp(32px, 4vw, 56px);
+            font-weight: 300; font-style: italic;
+        }
+        .shop-header-section p {
+            font-size: 13px; color: var(--muted);
+            margin-top: 8px; letter-spacing: 0.04em;
+        }
+        .shop-grid-section { padding: var(--spacing-lg) 52px; }
+        .shop-inner { max-width: var(--max-width); margin: 0 auto; }
+ 
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 28px;
+        }
+        .product-card { display: block; }
+        .product-card-img {
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            background: var(--bg-alt);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .product-card-img img { transition: transform 0.55s var(--ease); }
+        .product-card:hover .product-card-img img { transform: scale(1.04); }
+ 
+        .product-card-badge {
+            position: absolute; top: 16px; left: 16px;
+            font-size: 9px; letter-spacing: 0.18em;
+            text-transform: uppercase;
+            background: var(--saffron); color: #fff;
+            padding: 4px 10px;
+        }
+        .product-card-name {
+            font-size: 12px; font-weight: 400;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .product-card-desc {
+            font-size: 13px; color: var(--muted);
+            line-height: 1.7; margin-bottom: 10px;
+        }
+        .product-card-dims {
+            font-size: 11px; color: var(--muted);
+            letter-spacing: 0.04em; margin-bottom: 14px;
+            line-height: 1.8;
+        }
+        .product-card-price {
+            font-size: 14px; color: var(--text); font-weight: 300;
+        }
+ 
+        @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2,1fr); } }
+        @media (max-width: 560px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .shop-header-section, .shop-grid-section { padding-left: 24px; padding-right: 24px; }
+        }
+    </style>
+</head>
+<body>
+ 
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <nav class="nav-left">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <a href="index.html"><span class="logo-text">Lala Blue</span></a>
+        </div>
+        <nav class="nav-right">
+            <ul><li><a href="index.html">← Home</a></li></ul>
+        </nav>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+</nav>
+ 
+<section class="shop-header-section">
+    <h1 class="fade-up">All Products</h1>
+    <p class="fade-up d1">1 product · Orders available now</p>
+</section>
+ 
+<section class="shop-grid-section">
+    <div class="shop-inner">
+        <div class="product-grid">
+ 
+            <!--Gammon Bag!-->
+            <a href="index.html#product" class="product-card fade-up">
+                <div class="product-card-img">
+                    <img src="assets/images/product-front.jpg" alt="The Gammon Bag — front view">
+                    <span class="product-card-badge">New</span>
+                </div>
+                <p class="product-card-name">The Gammon Bag</p>
+                <p class="product-card-desc">
+                    Limited edition leather shoulder bag in black, gunmetal grey hardware,
+                    with the signature Lala Blue logo embossing.
+                </p>
+                <p class="product-card-dims">
+                    W: 34 cm · H: 14 cm · D: 11 cm · Handle Drop: 28 cm
+                </p>
+                <p class="product-card-price">$495.00 USD</p>
+            </a>
+ 
+            <!--This is a placeholder card — remove or replace as new bags are added-->
+            <!-- 
+            <a href="#" class="product-card fade-up d1">
+                <div class="product-card-img">
+                    <img src="assets/images/coming-soon.jpg" alt="Coming Soon">
+                </div>
+                <p class="product-card-name">Coming Soon</p>
+                <p class="product-card-price">—</p>
+            </a>
+            -->
+ 
+        </div>
+    </div>
+</section>
+ 
+<section class="newsletter">
+    <div class="newsletter-inner fade-up">
+        <h3>Be first to know.</h3>
+        <p>New pieces and exclusive access — right to your inbox.</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email">
+            <button type="button">Subscribe</button>
+        </div>
+    </div>
+</section>
+ 
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <span class="logo-text">Lala Blue</span>
+            <p class="footer-tagline">Handcrafted leather goods.</p>
+        </div>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="shipping-returns.html">Shipping &amp; Returns</a>
+            <a href="#">Privacy Policy</a>
+        </nav>
+        <div class="footer-right">
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+            </div>
+            <p class="footer-copy">© 2026 Lala Blue. All rights reserved.</p>
+        </div>
+        <hr class="footer-divider">
+    </div>
+</footer>
+ 
+<script> src="js/shop.js" </script>
+</body>
+</html>
